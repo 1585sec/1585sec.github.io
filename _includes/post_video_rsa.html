@@ -1,0 +1,12 @@
+<div class="blogpost_body">
+	<!--<br><br> is a workaround for CSS padding issue-->
+	<br><br>
+	<h2>{{ page.title }}</h2>
+	<h5> {{ page.date | date: "%B %e, %Y" }}</h5>
+
+	<div class="video">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/rkXaS6gbIrU" frameborder="0" allowfullscreen></iframe>
+	</div>
+      {{ content }}
+
+   </div>

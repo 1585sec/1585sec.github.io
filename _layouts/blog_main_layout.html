@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+	{% include nav.html %}
+
+	<div class="blogpost_body">
+
+  	  <br><br>
+  	  
+	  {% for post in site.posts %}
+	    <article class="post">
+
+	      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+		  <h5>{{ post.date | date: "%B %e, %Y" }}</h5>
+	      <div class="entry">
+	        {{ post.excerpt }}
+	      </div>
+
+	      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+	    </article>
+	  {% endfor %}
+	</div>
+
+  {% include scripts.html %}
+  {% include analytics.html %}
+
+
+</body>
+</html>
