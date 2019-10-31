@@ -26,7 +26,7 @@ Here's a breakdown of what we used in the video, roughly in the order it appeare
 
 
 ### Walkthrough: Quick Reference  
-<br><br>  
+<br>  
 **Finding Internal Photos in FCC Filings**  
 
 We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART). To get a peek at the inside of the camera before buying it we looked at the internal photos included in the camera's FCC filing. You can find the photos shown in the video by opening the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and entering 931-L's FCC ID: KA2CS931LA1.  
@@ -93,48 +93,19 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 		</tr>
 
 	</tbody>
-
+<br>  
 </table>
+<br
 _Quick Tip_ If you've never used a multimeter or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
 <br>  
-
-<br>
-
 **Wiring up the FTDI**
 
 With the camera powered off, we connected the FTDI to the camera board using jumper wires and grabber probes as shown below. Note that the "V" was not connected. 
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>FTDI Port</th>
-<th>UART TPH</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td markdown="span">GND</td>
-<td markdown="span">G</td>
-</tr>
-<tr>
-<td markdown="span">RXI</td>
-<td markdown="span">T</td>
-</tr>
-<tr>
-<td markdown="span">TX0</td>
-<td markdown="span">R</td>
-</tr>
-</tbody>
-</table>
-
 ![]({{ site.baseurl }}/img/blog/2019/ftdi-wired.jpg)
 
 Once the FTDI was wired up, we connected it to the laptop via USB.
-
+<br>  
 **Verifying the USB and opening a serial connection**
 
 With the camera powered off, we verified that the Kali VM recognized the FTDI with `lsusb`. We then found the TTY for it by running `ls /dev/|grep USB`. Since the FTDI was the only USB device attached to the VM, it was the only game in town (USB0).
@@ -154,10 +125,10 @@ Next we tried another common baud rate: 57600. Again, we used screen to open a s
 The boot process took ~3 minutes, during which a lot of information was written to the screen. We kept a copy of everything for an offline review (we used the scrollback buffer, but screen does have a native logging feature). After the console messages from the boot process calmed down we verified the shell with a few basic commands (`pwd`, `ls`, and `ps -ef`). 
 
 That was it for this one. Next time we'll poke around the shell a bit and see what we can do.
-
+<br>  
 ### Troubleshooting  
-
-Just a few ideas in case you run into any problems:
+<br>  
+A few common problems and things to try if you run into them:
 
 **Your machine doesn't recognize the FTDI**  
 You've made sure the FTDI is connected via the USB cable, but when you run an `lsusb` you don't see it. 
@@ -166,16 +137,22 @@ You've made sure the FTDI is connected via the USB cable, but when you run an `l
 * Depending on your OS and FTDI it could be a driver issue, check the docs for your stuff.
 * If all else fails, disconnect it all, reboot, and reconnect it.
 
-**"Device Busy" errors when opening a serial connection** . 
-Screen is notorious for hanging onto devices, especially if it’s not detached gracefully. Check for fouled screen processes that may be hanging onto the device using something like `ps -ef|grep SCREEN`, and kill if needed. 
+**"Device Busy" errors when opening a serial connection**   
+Screen is notorious for hanging onto devices, especially if it’s not detached gracefully. 
+* Check for fouled screen processes that may be hanging onto the device using something like `ps -ef|grep SCREEN`
+* To prevent this from happening, make sure to detach from `screen` connections with _ctrl+A+D_
 
-To prevent this from happening, make sure to detach from `screen` connections with _ctrl+A+D_
+**A serial connection opens but nothing happens**  
+So your computer can talk to the FTDI (that's good) but not beyond it. 
+* Check your wires, make sure the connections are good, and that everything is going to the right place. 
+* See the wiring diagram above for reference...mistakes like putting R-to-R are easy to make.
 
-**A serial connection opens but nothing happens**
-So your computer can talk to the FTDI (that's good) but not beyond it. Check your wires, make sure the connections are good, and that everything is going to the right place. See the wiring diagram above for reference...mistakes like putting R-to-R are easy to make.
+**A serial connection opens but the output is trash**  
+We saw this in the video when the baud rate was wrong, so that's an easy thing to check. But assuming that's right:
+* Triple-check (srsly) your ground connection- especially if "everything was working fine last time". 
+* A bad ground can foul up all sorts of stuff, and is often the source of connections looking janky/missing information.
 
-**A serial connection opens but the output is trash**
-We saw this in the video when the baud rate was wrong, so that's an easy thing to check. But assuming that's right, triple-check (srsly) your ground connection- especially if "everything was working fine last time". A bad ground can foul up all sorts of stuff, and is often the source of connections looking janky/missing information.
-
-**Camera isn't booting or is otherwise being weird**
-Check your connections to ensure you're not accidentally shorting anything. A bit too much solder or a bad angle on a grabber probe is usually the culprit. If you're still having trouble after that try the factory reset process (see camera docs). It's also possible that your board became damaged at some point, but fixing stuff like that is beyond what a beginner should try to fix.
+**Camera isn't booting or is otherwise being weird** 
+* Check your connections to ensure you're not accidentally shorting anything. A bit too much solder or a bad angle on a grabber probe is usually the culprit. 
+* If you're still having trouble after that try the factory reset process (see camera docs). 
+* It's also possible that your board became damaged at some point, but fixing stuff like that is beyond what a beginner should try to fix.
