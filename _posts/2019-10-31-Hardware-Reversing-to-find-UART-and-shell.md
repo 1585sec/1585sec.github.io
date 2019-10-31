@@ -61,8 +61,8 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 
 <table>
 	<colgroup>
-		<col width="10%" />
-		<col width="60%" />
+		<col width="20%" />
+		<col width="50%" />
 		<col width="30%" />
 	</colgroup>
 	<thead>
@@ -101,7 +101,7 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 	</tbody>
 
 </table>
-
+<br>
 _Heads Up!_ This section talks about using a multimeter. If you've never used one or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
 
 
