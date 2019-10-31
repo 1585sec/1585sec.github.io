@@ -22,17 +22,21 @@ Here's a breakdown of what we used in the video. You don't need specific makes/m
 
 ### Walkthrough: Quick Reference
 
-#### Finding Internal Photos in FCC Filings
+##### Finding Internal Photos in FCC Filings
 
 - We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART).
+<br>
 - The FCC filing for the 931-L is a matter of public record, and contains internal photos of the camera.
+
 - It's a lot easier to find a device's FCC filing is you know the FCC ID assigned to the device (KA2CS931LA1).
 - To see the filing and photos from the video browse to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and enter the FCC ID of the 931-L: KA2CS931LA1
 - If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
 
-#### Cracking the Case and Prepping the Board
+##### Cracking the Case and Prepping the Board
 
-- The camera's case is held together with ~8 plastic clips, which were removed using a shim cut from an aluminum can and a 1mm guitar pick. There are some great kits out there for cracking cases, but I wouldn't recommend investing in one for your first project.
+- The camera's case is held together with ~8 plastic clips, which we removed using a shim cut from an aluminum can and a 1mm guitar pick (there are great kits available for this kind of thing but I wouldn't recommend investing in one for your first project)
+
+- To hold the board steady we put it into a benchtop vise
 
 - 
 
