@@ -102,20 +102,41 @@ _Quick Tip_ If you've never used a multimeter or are just a bit rusty, there are
 
 **Wiring up the FTDI**
 
-With the camera powered off, we connected the FTDI to the camera board using jumper wires and grabber probes as shown below. Once the FTDI was wired up, we connected it to the laptop via USB.
+With the camera powered off, we connected the FTDI to the camera board using jumper wires and grabber probes as shown below. Note that the "V" was not connected. 
 
-|FTDI|Camera|
-|----|------|
-|GND|G|
-|RXI|T|
-|TX0|R|
-
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>FTDI</th>
+<th>UART</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td markdown="span">GND</td>
+<td markdown="span">G</td>
+</tr>
+<tr>
+<td markdown="span">RXI</td>
+<td markdown="span">T</td>
+</tr>
+<tr>
+<td markdown="span">TX0</td>
+<td markdown="span">R</td>
+</tr>
+</tbody>
+</table>
 * FTDI GND <-> Camera's G
 * FTDI RXI <-> Camera's T
 * FTDI TX0 <-> Camera's R
 
 ![]({{ site.baseurl }}/img/blog/2019/ftdi-wired.jpg)
 
+Once the FTDI was wired up, we connected it to the laptop via USB.
 
 **Verifying the USB and opening a serial connection**
 
