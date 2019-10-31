@@ -127,28 +127,24 @@ The boot process took ~3 minutes, during which a lot of information was written 
 That was it for this one. Next time we'll poke around the shell a bit and see what we can do.
 <br>  
 ### Troubleshooting  
-<br>  
+
 A few common problems and things to try if you run into them:
 
-**Your machine doesn't recognize the FTDI**  
-You've made sure the FTDI is connected via the USB cable, but when you run an `lsusb` you don't see it. 
+**Your machine doesn't recognize the FTDI**. You've made sure the FTDI is connected via the USB cable, but when you run an `lsusb` you don't see it. 
 
 * If you're running a VM, make sure it's connected to that, rather than your host machine. 
 * Depending on your OS and FTDI it could be a driver issue, check the docs for your stuff.
 * If all else fails, disconnect it all, reboot, and reconnect it.
 
-**"Device Busy" errors when opening a serial connection**   
-Screen is notorious for hanging onto devices, especially if it’s not detached gracefully. 
+**"Device Busy" errors when opening a serial connection**. Screen is notorious for hanging onto devices, especially if it’s not detached gracefully.  
 * Check for fouled screen processes that may be hanging onto the device using something like `ps -ef|grep SCREEN`
 * To prevent this from happening, make sure to detach from `screen` connections with _ctrl+A+D_
 
-**A serial connection opens but nothing happens**  
-So your computer can talk to the FTDI (that's good) but not beyond it. 
+**A serial connection opens but nothing happens**. Sounds like your computer can talk to the FTDI (that's good), but not beyond it.   
 * Check your wires, make sure the connections are good, and that everything is going to the right place. 
 * See the wiring diagram above for reference...mistakes like putting R-to-R are easy to make.
 
-**A serial connection opens but the output is trash**  
-We saw this in the video when the baud rate was wrong, so that's an easy thing to check. But assuming that's right:
+**A serial connection opens but the output is trash**.  We saw this in the video when the baud rate was wrong, so that's an easy thing to check. But assuming that's right:  
 * Triple-check (srsly) your ground connection- especially if "everything was working fine last time". 
 * A bad ground can foul up all sorts of stuff, and is often the source of connections looking janky/missing information.
 
