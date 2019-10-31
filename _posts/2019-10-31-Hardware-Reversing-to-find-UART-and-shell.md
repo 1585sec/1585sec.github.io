@@ -103,11 +103,29 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 _Heads Up!_ This section talks about using a multimeter. If you've never used one or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
 
 <br>
+
 **Wiring up the FTDI**
 
-We connected the FTDI to the camera board using jumper wires and grabber probes
+With the camera powered off, we connected the FTDI to the camera board using jumper wires and grabber probes as shown below. Once the FTDI was wired up, we connected it to the laptop via USB.
+
+* FTDI GND <-> Camera's G
+* FTDI RXI <-> Camera's T
+* FTDI TX0 <-> Camera's R
 
 ![]({{ site.baseurl }}/img/blog/2019/ftdi-wired.jpg)
 
 
+**Verifying the USB and opening a serial connection**
+
+With the camera powered off, we verified that the Kali VM recognized the FTDI with `lsusb`. We then found the TTY for it by running `ls /dev/|grep USB`. Since the FTDI was the only USB device attached to the VM, only one TTY was returned (USB0).
+
+![]({{ site.baseurl }}/img/blog/2019/verifying-USB.jpg)
+
+We now knew where to open the serial connection using the `screen` utility, but we didn't know which baud rate to specify. While we could have calculated it or used a tool that could calculate it for us, we opted to try guessing it from a short list of common baud rates. 
+
+Our first guess was 115200. We tested it by opening a serial connection with `screen /dev/ttyUSB0 115200`, and then powering up the camera. The result was mangled output, so this was a bad guess. We powered off the camera, then exited screen with a _ctrl+A+D_
+
+Next we tried another common baud rate: 57600. Again, we used screen to open a serial connection (`screen /dev/ttyUSB0 57600`), then powered on the camera. This time it worked!
+
+**Verifying the shell**
 
