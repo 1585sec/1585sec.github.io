@@ -23,15 +23,13 @@ Here's a breakdown of what we used in the video, roughly in the order it appeare
 * Header Pins
 * USB cable
 * Kali Linux (VM running over Mac)
-<br><br>
 
-### Walkthrough: Quick Reference
-<br>
-**Finding Internal Photos in FCC Filings**
 
-We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART). To get a peek at the inside of the camera before buying it we looked at the internal photos included in the camera's FCC filing.
+### Walkthrough: Quick Reference  
 
-You can find the photos shown in the video by browsing to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and entering 931-L's FCC ID: KA2CS931LA1
+**Finding Internal Photos in FCC Filings**  
+
+We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART). To get a peek at the inside of the camera before buying it we looked at the internal photos included in the camera's FCC filing. You can find the photos shown in the video by browsing to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and entering 931-L's FCC ID: KA2CS931LA1
 
 _Quick Tip_ If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
 
@@ -42,7 +40,7 @@ The camera's case is held together with ~8 plastic clips, which we removed using
 
 We put the board into a benchtop vise to hold it steady, then plugged the power supply into a switched outlet. This allowed us to power the device up and down easily, without fumbling around to pull the cable out. If you don't have a switched outlet, a surge protector or a lamp cord switch will do the trick just fine.
 
-A bit out of order here, but one last board prep item: we also placed a row of 4 header pins into the row of plated through holes (TPHs). We didn't solder it, but we got really lucky there. If you're doing this on your own I'd recommend soldering them in, if only to remove a possible point of failure. It's also worth noting that the pin size and pin pitch (distance between pins) is smaller than the more commonly sized connectors out there. If you run into problems, consider just soldering jumper wires to the PTHs themselves (to save time remember you don't actually need the one marked V!)
+A bit out of order here, but one last board prep item: we also placed a row of 4 header pins into the row of plated through holes (TPHs). We didn't solder it, but we got really lucky there. If you're doing this on your own I'd recommend soldering them in, if only to remove a possible point of failure. It's also worth noting that the pin size and pin pitch (distance between pins) is smaller than the more commonly sized connectors out there. If you run into problems, consider just soldering jumper wires to the PTHs themselves (to save time remember you don't actually need the one marked V!)  
 
 **Finding the UART**
 
@@ -97,7 +95,7 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 	</tbody>
 
 </table>
-
+<br>  
 
 _Heads Up!_ This section talks about using a multimeter. If you've never used one or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
 
