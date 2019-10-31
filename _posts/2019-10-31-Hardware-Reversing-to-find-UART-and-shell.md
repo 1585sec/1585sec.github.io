@@ -58,28 +58,6 @@ The JST connectors shown in the FCC photos weren't on our camera, but the four p
 
 It seemed likely that the labels on those PTHs stood for Ground, Receive, Transmit, and some kind of voltage, but we ran a hasty survey to be sure. We began by checking for Ground on "G" by using the multimeter to run a continuity test between "G" and a spot on the board where the ground plane was exposed.  With ground confirmed we switched the multimeter to measure DC voltage, powered on the device and checked the voltage levels on "R", "T", and "V". Observations and conclusions from the survey are summarized below.
 
-| TPH | Observation | Conclusion|
-|---|---|---|
-| G | Continuity test showed it was connected to the device's ground plane | G = Ground |
-| R | With the device powered on it was pulled down to zero and staye there. | R = Receive (Serial Input) |
-| T | Jittered around in the neighborhood of 3.3V when the devices was booting | T = Transmit (Serial Out)|
-| V | Pulled up to 3.31 when powered on and stayed there | V = Voltage (Likely supply)|
-
-_Heads Up!_ This section talks about using a multimeter. If you've never used one or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
-
-
-
-
-#### Wiring up the FTDI
-
-![]({{ site.baseurl }}/img/blog/2019/ftdi-wiring.jpg)
-
-Followed by text?
-
-
-### KILL THIS
-
-Just a test HTML table 
 
 <table>
 	<colgroup>
@@ -97,7 +75,7 @@ Just a test HTML table
 
 	<tbody>
 		<tr>
-			<td markdown="span">G</td>
+			<td markdown="span">**G**</td>
 			<td markdown="span">Continuity with device's ground plane.</td>
 			<td markdown="span">G = Ground</td>
 		</tr>
@@ -123,3 +101,15 @@ Just a test HTML table
 	</tbody>
 
 </table>
+
+_Heads Up!_ This section talks about using a multimeter. If you've never used one or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
+
+
+
+
+#### Wiring up the FTDI
+
+![]({{ site.baseurl }}/img/blog/2019/ftdi-wiring.jpg)
+
+Followed by text?
+
