@@ -82,44 +82,44 @@ Followed by text?
 Just a test HTML table 
 
 <table>
-<colgroup>
-<col width="10%" />
-<col width="60%" />
-<col width="30%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>PTH</th>
-<th>Observations</th>
-<th>Conclusions</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td markdown="span">G</td>
-<td markdown="span">Continuity with device's ground plane.</td>
-<td markdown="span">G = Ground</td>
-</tr>
-<tr>
-<td markdown="span">**R**</td>
-<td markdown="span">Pulled down when device running.</td>
-<td markdown="span">R = Receive (Serial In)</td>
-</tr>
-<td markdown="span">**T**</td>
-<td markdown="span">Jitters ~3.3V when the device is booting</td>
-<td markdown="span">T = Transmit (Serial Out)</td>
-</tr>
-<td markdown="span">**V**</td>
-<td markdown="span">Pulled up to 3.31, stays there.</td>
-<td markdown="span">V = Voltage (supply)</td>
-</tr>
-</tbody>
+	<colgroup>
+		<col width="10%" />
+		<col width="60%" />
+		<col width="30%" />
+	</colgroup>
+	<thead>
+		<tr class="header">
+			<th>PTH Label</th>
+			<th>Observations</th>
+			<th>Conclusions</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td markdown="span">G</td>
+			<td markdown="span">Continuity with device's ground plane.</td>
+			<td markdown="span">G = Ground</td>
+		</tr>
+
+		<tr>
+			<td markdown="span">**R**</td>
+			<td markdown="span">Pulled down when device running.</td>
+			<td markdown="span">R = Receive (Serial In)</td>
+		</tr>
+
+		<tr>
+			<td markdown="span">**T**</td>
+			<td markdown="span">Jitters ~3.3V when the device is booting</td>
+			<td markdown="span">T = Transmit (Serial Out)</td>
+		</tr>
+		
+		<tr>
+			<td markdown="span">**V**</td>
+			<td markdown="span">Pulled up to 3.31, stays there.</td>
+			<td markdown="span">V = Voltage (supply)</td>
+		</tr>
+
+	</tbody>
+
 </table>
-
-| TPH | Observation | Conclusion|
-|---|---|---|
-| G | Continuity test showed it was connected to the device's ground plane | G = Ground |
-| R | With the device powered on it was pulled down to zero and staye there. | R = Receive (Serial Input) |
-| T | Jittered around in the neighborhood of 3.3V when the devices was booting | T = Transmit (Serial Out)|
-| V | Pulled up to 3.31 when powered on and stayed there | V = Voltage (Likely supply)|
-
