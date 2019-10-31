@@ -24,6 +24,7 @@ Here's a breakdown of what we used in the video, roughly in the order it appeare
 * USB cable
 * Kali Linux (VM running over Mac)
 
+<br>  
 
 ### Walkthrough: Quick Reference  
 <br>  
@@ -95,7 +96,7 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 	</tbody>
 </table>
 <br>  
-_Quick Tip_ If you've never used a multimeter or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
+_Quick Tip:_ If you've never used a multimeter or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
 <br>  
 **Wiring up the FTDI**
 
