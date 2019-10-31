@@ -22,24 +22,30 @@ Here's a breakdown of what we used in the video. You don't need specific makes/m
 
 ### Walkthrough: Quick Reference
 
-##### Finding Internal Photos in FCC Filings
+##### 
 
-- We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART).
-<br>
-- The FCC filing for the 931-L is a matter of public record, and contains internal photos of the camera.
+**Finding Internal Photos in FCC Filings**
 
-- It's a lot easier to find a device's FCC filing is you know the FCC ID assigned to the device (KA2CS931LA1).
-- To see the filing and photos from the video browse to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and enter the FCC ID of the 931-L: KA2CS931LA1
-- If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
+We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART). To get a peek at the inside of the camera before buying it we looked at the internal photos included in the camera's FCC filing.
 
-##### Cracking the Case and Prepping the Board
+To see the filing and photos from the video browse to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and enter the FCC ID of the 931-L: KA2CS931LA1
 
-- The camera's case is held together with ~8 plastic clips, which we removed using a shim cut from an aluminum can and a 1mm guitar pick (there are great kits available for this kind of thing but I wouldn't recommend investing in one for your first project)
+If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
 
-- To hold the board steady we put it into a benchtop vise
 
-- 
+**Cracking the Case and Prepping the Board**
 
+The camera's case is held together with ~8 plastic clips, which we removed using a shim cut from an aluminum can and a 1mm guitar pick (there are great kits available for this kind of thing but I wouldn't recommend investing in one for your first project).
+
+We put the board into a benchtop vise to hold it steady, then plugged the power supply into a switched outlet. This allowed us to power the device up and down easily, without fumbling around to pull the cable out. If you don't have a switched outlet, a surge protector or a lamp cord switch will do the trick just fine.
+
+A bit out of order here, but one last board prep item: we also placed a row of 4 header pins into the row of plated through holes (TPHs). We didn't solder it, but we got really lucky there. If you're doing this on your own I'd recommend soldering them in, if only to remove a possible point of failure. It's also worth noting that the pin size and pin pitch (distance between pins) is smaller than the more commonly sized connectors out there. If you run into problems, consider just soldering jumper wires to the PTHs themselves (to save time remember you don't actually need the one marked V!)
+
+**Testing the UART**
+
+The JST connectors shown in the FCC photos weren't on our camera, but the four plated through holes (TPHs) that the JST connector used where still present. As shown below the reference designator on the board was J2, and TPHs themselves were labeled "G", "R", "T", and "V"
+
+![]({{ site.baseurl }}/img/blog/2019/UART-on-board.jpg)
 
 To see what the inside of the camera looked like before buying it we checked 
 would be a good candidate for the project a We looked at internal photos of the 931-L to 
