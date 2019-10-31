@@ -12,46 +12,16 @@ For those who want to try this on there own I've posted a list of tools/equipmen
 Target Device: D-Link 931-L Camera
 
 <table>
-	<colgroup>
-		<col width="20%" />
-		<col width="50%" />
-		<col width="30%" />
-	</colgroup>
-	<thead>
-		<tr class="header">
-			<th>Label</th>
-			<th>Observations</th>
-			<th>Conclusions</th>
-		</tr>
-	</thead>
-
 	<tbody>
 		<tr>
-			<td markdown="span">**G**</td>
-			<td markdown="span">Continuity with device's ground plane.</td>
-			<td markdown="span">G = Ground</td>
+			<td markdown="span">Target Device</td>
+			<td markdown="span">D-Link 931-L</td>
 		</tr>
-
 		<tr>
-			<td markdown="span">**R**</td>
-			<td markdown="span">Pulled down when device running.</td>
-			<td markdown="span">R = Receive (Serial In)</td>
+			<td markdown="span">Cracking the Case</td>
+			<td markdown="span">* Aluminum Can Shim<br> * 1mm Guitar Pick<br> * PH0 Screwdriver</td>
 		</tr>
-
-		<tr>
-			<td markdown="span">**T**</td>
-			<td markdown="span">Jitters ~3.3V when the device is booting</td>
-			<td markdown="span">T = Transmit (Serial Out)</td>
-		</tr>
-		
-		<tr>
-			<td markdown="span">**V**</td>
-			<td markdown="span">Pulled up to 3.31, stays there.</td>
-			<td markdown="span">V = Voltage (supply)</td>
-		</tr>
-
 	</tbody>
-
 </table>
 
 To crack the case:
