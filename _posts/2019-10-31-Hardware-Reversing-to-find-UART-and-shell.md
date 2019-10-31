@@ -9,7 +9,23 @@ For those who want to try this on there own I've posted a list of tools/equipmen
 
 ### Tools and Equipment
 
-* This is a list item
+Target Device: D-Link 931-L Camera
+
+<table>
+	<tbody>
+		<tr>
+			<td markdown="span">Target Device</td>
+			<td markdown="span">D-Link 931-L</td>
+		</tr>
+		<tr>
+			<td markdown="span">Cracking the Case</td>
+			<td markdown="span">* Aluminum Can Shim<br> * 1mm Guitar Pick<br> * PH0 Screwdriver</td>
+	</tbody>
+</table>
+
+To crack the case:
+* Shim made from an aluminum can
+* 1mm guitar pick
   * This is a sub list item
 * Back to list items again
 
@@ -64,7 +80,7 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 	</colgroup>
 	<thead>
 		<tr class="header">
-			<th>PTH Label</th>
+			<th>Label</th>
 			<th>Observations</th>
 			<th>Conclusions</th>
 		</tr>
@@ -98,7 +114,8 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 	</tbody>
 
 </table>
-<br>
+
+
 _Heads Up!_ This section talks about using a multimeter. If you've never used one or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
 
 
