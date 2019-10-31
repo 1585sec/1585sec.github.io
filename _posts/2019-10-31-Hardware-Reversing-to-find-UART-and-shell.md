@@ -9,40 +9,23 @@ For those who want to try this on there own I've posted a list of tools/equipmen
 
 ### Tools and Equipment
 
-Target Device: D-Link 931-L Camera
+Here's a breakdown of what we used in the video, roughly in the order it appeared. You don't need specific makes/models of anything except the 931-L; whatever equivalent tools you have will probably do the trick.
 
-<table>
-	<tbody>
-		<tr>
-			<td markdown="span">Target Device</td>
-			<td markdown="span">D-Link 931-L</td>
-		</tr>
-		<tr>
-			<td markdown="span">Cracking the Case</td>
-			<td markdown="span">* Aluminum Can Shim<br> * 1mm Guitar Pick<br> * PH0 Screwdriver</td>
-		</tr>
-	</tbody>
-</table>
-
-To crack the case:
+* D-Link 931-L Camera
 * Shim made from an aluminum can
 * 1mm guitar pick
-  * This is a sub list item
-* Back to list items again
+* Phillips head driver (PH0)
+* Benchtop Vise (Panavise 201)
+* Switched outlet
+* Multimeter (Innova 3320)
+* 3.3V FTDI (Sparkfun DEV-09873)
+* Grabber Probes w/ jumper wires attached
+* Header Pins
+* USB cable
+* Kali Linux (VM running over Mac)
 
-Here's a breakdown of what we used in the video. You don't need specific makes/models of anything except the 931-L; whatever equivalent tools you have will probably do the trick.
-
-|What was it?|How was it used?| Notes|
-|----------------|-------------|-------------|
-|D-Link 931L | Target | Almost identical to the 932, bought mine on Amazon|
-|FCC.gov<br>FCCID.io|Device Recon: Viewing internal photos from FCC filings|The 931-L’s FCC ID is KA2CS931LA1|
-|* Shim made from an aluminum can<br>* 1mm guitar pick<br>* Phillips head screwdriver (PH0)|Cracking the case||
-|Multimeter| * Finding ground<br>* Measuring DC voltage levels on the UART|I used an Innova 3320, but any will do|
-|*3.3v FTDI UART<br>* Kali Linux VM<br>* Jumper Wires<br>*	Grabber Probes<br>*	Header Pins<br>* USB cable| Communicating with the UART|I used a SparkFun DEV-09873 FTDI|
-|Misc. | * Benchtop Vise <br> * Switched outlet| I used a Panavise 201 "Junior"|
 
 ### Walkthrough: Quick Reference
-
 
 **Finding Internal Photos in FCC Filings**
 
