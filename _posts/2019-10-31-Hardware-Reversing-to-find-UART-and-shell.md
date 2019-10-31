@@ -3,7 +3,7 @@ layout: blog_post_video_ftdi
 title: Hardware Reversing to find UART and shell
 ---
 
-It's been a long time, but I finally posted a follow up video! In this one we'll dip a toe into hardware reversing by finding a UART (serial port) and using it to get shell access on the device. If you've never done anything with hardware this is a great place to start, or at least get some initial exposure to the concept. 
+It has been a (really) long time, but I finally posted a follow up video! In this one we're dipping a toe into hardware reversing by finding a UART (serial port) and using it to get shell access on the device. If you've never done anything with hardware this is a great place to start, or at least get some initial exposure to the concept. 
 
 For those who want to try this on there own I've posted a list of tools/equipment, a set of quick reference steps from the walkthrough, and finally some troubleshooting ideas in case you hit any snags.
 
@@ -23,7 +23,7 @@ Here's a breakdown of what we used in the video, roughly in the order it appeare
 * Header Pins
 * USB cable
 * Kali Linux (VM running over Mac)
-
+<br><br>
 
 ### Walkthrough: Quick Reference
 <br>
@@ -31,9 +31,9 @@ Here's a breakdown of what we used in the video, roughly in the order it appeare
 
 We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART). To get a peek at the inside of the camera before buying it we looked at the internal photos included in the camera's FCC filing.
 
-To see the filing and photos from the video browse to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and enter the FCC ID of the 931-L: KA2CS931LA1
+You can find the photos shown in the video by browsing to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and entering 931-L's FCC ID: KA2CS931LA1
 
-If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
+_Quick Tip_ If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
 
 <br>
 **Cracking the Case and Prepping the Board**
