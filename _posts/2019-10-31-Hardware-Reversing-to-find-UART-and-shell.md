@@ -34,6 +34,7 @@ We needed to know if the 931-L had the kind of attack surface we were looking fo
 To see the filing and photos from the video browse to the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and enter the FCC ID of the 931-L: KA2CS931LA1
 
 If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
+
 <br>
 **Cracking the Case and Prepping the Board**
 
@@ -42,6 +43,7 @@ The camera's case is held together with ~8 plastic clips, which we removed using
 We put the board into a benchtop vise to hold it steady, then plugged the power supply into a switched outlet. This allowed us to power the device up and down easily, without fumbling around to pull the cable out. If you don't have a switched outlet, a surge protector or a lamp cord switch will do the trick just fine.
 
 A bit out of order here, but one last board prep item: we also placed a row of 4 header pins into the row of plated through holes (TPHs). We didn't solder it, but we got really lucky there. If you're doing this on your own I'd recommend soldering them in, if only to remove a possible point of failure. It's also worth noting that the pin size and pin pitch (distance between pins) is smaller than the more commonly sized connectors out there. If you run into problems, consider just soldering jumper wires to the PTHs themselves (to save time remember you don't actually need the one marked V!)
+
 <br>
 **Finding the UART**
 
@@ -53,7 +55,6 @@ The JST connectors shown in the FCC photos weren't on our camera, but the four p
 **Testing the UART**
 
 It seemed likely that the labels on those PTHs stood for Ground, Receive, Transmit, and some kind of voltage, but we ran a hasty survey to be sure. We began by checking for Ground on "G" by using the multimeter to run a continuity test between "G" and a spot on the board where the ground plane was exposed.  With ground confirmed we switched the multimeter to measure DC voltage, powered on the device and checked the voltage levels on "R", "T", and "V". Observations and conclusions from the survey are summarized below.
-
 
 <table>
 	<colgroup>
@@ -100,10 +101,13 @@ It seemed likely that the labels on those PTHs stood for Ground, Receive, Transm
 
 
 _Heads Up!_ This section talks about using a multimeter. If you've never used one or are just a bit rusty, there are loads of tutorials out there. SparkFun's [How to Use a Multimeter](https://learn.sparkfun.com/tutorials/how-to-use-a-multimeter/) is solid and includes walkthroughs of the continuity and voltage measurements we did in the video.
+
 <br>
 **Wiring up the FTDI**
 
-![]({{ site.baseurl }}/img/blog/2019/ftdi-wiring.jpg)
+We connected the FTDI to the camera board using jumper wires and grabber probes
 
-Followed by text?
+![]({{ site.baseurl }}/img/blog/2019/ftdi-wired.jpg)
+
+
 
