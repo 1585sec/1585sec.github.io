@@ -131,5 +131,7 @@ Next we tried another common baud rate: 57600. Again, we used screen to open a s
 
 ![]({{ site.baseurl }}/img/blog/2019/boot-loader-menu.jpg)
 
-**Verifying the shell**
+The boot process took ~3 minutes, during which a lot of information was written to the screen. We kept a copy of everything for an offline review (we used the scrollback buffer, but screen does have a native logging feature). After the console messages from the boot process calmed down we verified the shell with a few basic commands (`pwd`, `ls`, and `ps -ef`). 
+
+That was it for this one. Next time we'll poke around the shell a bit and see what we can do.
 
