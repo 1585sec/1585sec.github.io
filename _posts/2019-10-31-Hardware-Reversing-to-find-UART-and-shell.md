@@ -90,27 +90,28 @@ Just a test HTML table
 <thead>
 <tr class="header">
 <th>PTH</th>
-<th>Observation</th>
-<th>Conclusion</th>
+<th>Observations</th>
+<th>Conclusions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td markdown="span">**G**</td>
-<td markdown="span">Continuity test showed it was connected to the device's ground plane.</td>
+<td markdown="span">G</td>
+<td markdown="span">Continuity with device's ground plane.</td>
+<td markdown="span">G = Ground</td>
 </tr>
 <tr>
 <td markdown="span">**R**</td>
-<td markdown="span">Some more descriptive text.</td>
-<td markdown="span">G = Ground</td>
+<td markdown="span">Pulled down when device running.</td>
+<td markdown="span">R = Receive (Serial In)</td>
 </tr>
 <td markdown="span">**T**</td>
-<td markdown="span">Some more descriptive text.</td>
+<td markdown="span">Jitters ~3.3V when the device is booting</td>
 <td markdown="span">T = Transmit (Serial Out)</td>
 </tr>
 <td markdown="span">**V**</td>
-<td markdown="span">Some more descriptive text.</td>
-<td markdown="span">V = Voltage (likely supply)</td>
+<td markdown="span">Pulled up to 3.31, stays there.</td>
+<td markdown="span">V = Voltage (supply)</td>
 </tr>
 </tbody>
 </table>
