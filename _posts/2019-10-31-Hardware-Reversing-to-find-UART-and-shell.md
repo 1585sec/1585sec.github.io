@@ -9,12 +9,9 @@ For those who want to try this on there own I've posted a list of tools/equipmen
 
 ### Tools and Equipment
 
-|Test|Table|
-|One|Two|
-
-|Test|Table|
-|----|-----|
-|Test2|Test2|
+* This is a list item
+  * This is a sub list item
+* Back to list items again
 
 Here's a breakdown of what we used in the video. You don't need specific makes/models of anything except the 931-L; whatever equivalent tools you have will probably do the trick.
 
