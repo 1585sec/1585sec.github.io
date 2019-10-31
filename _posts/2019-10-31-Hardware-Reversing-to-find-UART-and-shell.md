@@ -26,12 +26,12 @@ Here's a breakdown of what we used in the video, roughly in the order it appeare
 
 
 ### Walkthrough: Quick Reference  
-
+  
 **Finding Internal Photos in FCC Filings**  
 
 We needed to know if the 931-L had the kind of attack surface we were looking for (specifically a UART). To get a peek at the inside of the camera before buying it we looked at the internal photos included in the camera's FCC filing. You can find the photos shown in the video by opening the [FCC's search tool](https://www.fcc.gov/oet/ea/fccid) and entering 931-L's FCC ID: KA2CS931LA1.  
 
-_Quick Tip_ If you want to find the filing for a device but don't know the FCC ID, I recommend using [FCCID.io's free search tool](https://fccid.io/search.php) (it's a lot faster/easier than trying to pry it out of the FCC's search tool).
+Quick Tip: If you want to find the filing for a device but don't know the FCC ID, try [FCCID.io's free search tool](https://fccid.io/search.php). It's a lot faster/easier than trying to pry it out of the FCC's search tool.
 
 <br>
 **Cracking the Case and Prepping the Board**
