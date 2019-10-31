@@ -17,6 +17,6 @@ How about this one
 
 How about an image?
 
-![]({{ site.baseurl }}/img/blog/2019/ftdi-wiring.jpg)
+![]({{ site.baseurl }}/img/blog/2019/ftdi-wiring.jpg =800)
 
 Followed by text?
