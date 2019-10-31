@@ -5,7 +5,7 @@ title: Hardware Reversing to find UART and shell
 
 It has been a (really) long time, but I finally posted a follow up video! In this one we're dipping a toe into hardware reversing by finding a UART (serial port) and using it to get shell access on the device. If you've never done anything with hardware this is a great place to start, or at least get some initial exposure to the concept. 
 
-For those who want to try this on there own I've posted a list of tools/equipment, a set of quick reference steps from the walkthrough, and finally some troubleshooting ideas in case you hit any snags.
+For those who want to try this on there own I've posted a list of tools/equipment, a set of quick reference steps from the walkthrough, and finally some troubleshooting ideas in case you hit any snags. The camera is cheap and it's about as soft a target as they come, so hopefully this is a fun way to cut your teeth.
 
 ### Tools and Equipment
 
@@ -111,8 +111,8 @@ With the camera powered off, we connected the FTDI to the camera board using jum
 </colgroup>
 <thead>
 <tr class="header">
-<th>FTDI</th>
-<th>UART</th>
+<th>FTDI Port</th>
+<th>UART TPH</th>
 </tr>
 </thead>
 <tbody>
@@ -130,9 +130,6 @@ With the camera powered off, we connected the FTDI to the camera board using jum
 </tr>
 </tbody>
 </table>
-* FTDI GND <-> Camera's G
-* FTDI RXI <-> Camera's T
-* FTDI TX0 <-> Camera's R
 
 ![]({{ site.baseurl }}/img/blog/2019/ftdi-wired.jpg)
 
@@ -158,3 +155,27 @@ The boot process took ~3 minutes, during which a lot of information was written 
 
 That was it for this one. Next time we'll poke around the shell a bit and see what we can do.
 
+### Troubleshooting  
+
+Just a few ideas in case you run into any problems:
+
+**Your machine doesn't recognize the FTDI**  
+You've made sure the FTDI is connected via the USB cable, but when you run an `lsusb` you don't see it. 
+
+* If you're running a VM, make sure it's connected to that, rather than your host machine. 
+* Depending on your OS and FTDI it could be a driver issue, check the docs for your stuff.
+* If all else fails, disconnect it all, reboot, and reconnect it.
+
+**"Device Busy" errors when opening a serial connection** . 
+Screen is notorious for hanging onto devices, especially if it’s not detached gracefully. Check for fouled screen processes that may be hanging onto the device using something like `ps -ef|grep SCREEN`, and kill if needed. 
+
+To prevent this from happening, make sure to detach from `screen` connections with _ctrl+A+D_
+
+**A serial connection opens but nothing happens**
+So your computer can talk to the FTDI (that's good) but not beyond it. Check your wires, make sure the connections are good, and that everything is going to the right place. See the wiring diagram above for reference...mistakes like putting R-to-R are easy to make.
+
+**A serial connection opens but the output is trash**
+We saw this in the video when the baud rate was wrong, so that's an easy thing to check. But assuming that's right, triple-check (srsly) your ground connection- especially if "everything was working fine last time". A bad ground can foul up all sorts of stuff, and is often the source of connections looking janky/missing information.
+
+**Camera isn't booting or is otherwise being weird**
+Check your connections to ensure you're not accidentally shorting anything. A bit too much solder or a bad angle on a grabber probe is usually the culprit. If you're still having trouble after that try the factory reset process (see camera docs). It's also possible that your board became damaged at some point, but fixing stuff like that is beyond what a beginner should try to fix.
