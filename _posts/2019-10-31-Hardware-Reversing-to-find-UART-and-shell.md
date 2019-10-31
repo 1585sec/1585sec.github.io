@@ -83,24 +83,42 @@ Just a test HTML table
 
 <table>
 <colgroup>
+<col width="10%" />
+<col width="60%" />
 <col width="30%" />
-<col width="70%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>Field</th>
-<th>Description</th>
+<th>PTH</th>
+<th>Observation</th>
+<th>Conclusion</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td markdown="span">First column **fields**</td>
-<td markdown="span">Some descriptive text. This is a markdown link to [Google](http://google.com). Or see [some link][mydoc_tags].</td>
+<td markdown="span">**G**</td>
+<td markdown="span">Continuity test showed it was connected to the device's ground plane.</td>
 </tr>
 <tr>
-<td markdown="span">Second column **fields**</td>
-<td markdown="span">Some more descriptive text.
-</td>
+<td markdown="span">**R**</td>
+<td markdown="span">Some more descriptive text.</td>
+<td markdown="span">G = Ground</td>
+</tr>
+<td markdown="span">**T**</td>
+<td markdown="span">Some more descriptive text.</td>
+<td markdown="span">T = Transmit (Serial Out)</td>
+</tr>
+<td markdown="span">**V**</td>
+<td markdown="span">Some more descriptive text.</td>
+<td markdown="span">V = Voltage (likely supply)</td>
 </tr>
 </tbody>
 </table>
+
+| TPH | Observation | Conclusion|
+|---|---|---|
+| G | Continuity test showed it was connected to the device's ground plane | G = Ground |
+| R | With the device powered on it was pulled down to zero and staye there. | R = Receive (Serial Input) |
+| T | Jittered around in the neighborhood of 3.3V when the devices was booting | T = Transmit (Serial Out)|
+| V | Pulled up to 3.31 when powered on and stayed there | V = Voltage (Likely supply)|
+
