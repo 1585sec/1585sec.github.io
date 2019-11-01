@@ -130,23 +130,23 @@ That was it for this one. Next time we'll poke around the shell a bit and see wh
 
 A few common problems and things to try if you run into them:
 
-**Your machine doesn't recognize the FTDI**. You've made sure the FTDI is connected via the USB cable, but when you run an `lsusb` you don't see it. 
+**Your machine doesn't recognize the FTDI**. You've made sure the FTDI is connected via the USB cable, but you don't see it in a `lsusb`. 
 
-* If you're running a VM, make sure it's connected to that, rather than your host machine. 
+* If you're running a VM, make sure the USB is connected to that, rather than your host machine.
 * Depending on your OS and FTDI it could be a driver issue, check the docs for your stuff.
 * If all else fails, disconnect it all, reboot, and reconnect it.
 
-**"Device Busy" errors when opening a serial connection**. Screen is notorious for hanging onto devices, especially if it’s not detached gracefully.  
-* Check for fouled screen processes that may be hanging onto the device using something like `ps -ef|grep SCREEN`
-* To prevent this from happening, make sure to detach from `screen` connections with _ctrl+A+D_
+**Errors when opening a serial connection**. You're getting error messages with stuff like _Device Busy_ or _Cannot exec '/dev/ttyUSB0': No such file or directory_.
+
+* Screen is notorious for hanging onto devices if it's not detached gracefully, which can cause _device busy_ errors. Check for fouled processes with something like `ps -ef|grep SCREEN`. Prevent this kind of stuff by making sure you detach from `screen` connections with _ctrl+A+D_
+* If you're getting _no such file or directory_ errors, it could be that your machine isn't recogizing the FTDI (see above), or just that you're specifying the wrong device. Double check that TTY- it won't always be ttyUSB0, particularly if you've got more than one USB device connected.
 
 **A serial connection opens but nothing happens**. Sounds like your computer can talk to the FTDI (that's good), but not beyond it.   
 * Check your wires, make sure the connections are good, and that everything is going to the right place. 
 * See the wiring diagram above for reference...mistakes like putting R-to-R are easy to make.
 
-**A serial connection opens but the output is trash**.  We saw this in the video when the baud rate was wrong, so that's an easy thing to check. But assuming that's right:  
-* Triple-check (srsly) your ground connection- especially if "everything was working fine last time". 
-* A bad ground can foul up all sorts of stuff, and is often the source of connections looking janky/missing information.
+**A serial connection opens but the output is a mess**.  We saw this in the video when the baud rate was wrong, so that's an easy thing to check. But assuming that's right:  
+* Triple-check (srsly) your ground connection- especially if "everything was working fine last time". A bad ground can foul up all sorts of stuff, and is often the source of connections looking janky/missing information.
 
 **Camera isn't booting or is otherwise being weird** 
 * Check your connections to ensure you're not accidentally shorting anything. A bit too much solder or a bad angle on a grabber probe is usually the culprit. 
